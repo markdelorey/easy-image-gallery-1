@@ -3,8 +3,8 @@ Contributors: sumobi
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EFUPMPEZPGW7L
 Tags: image gallery, image, galleries, simple, easy, sumobi
 Requires at least: 3.5
-Tested up to: 3.6
-Stable tag: 1.0.4
+Tested up to: 3.9 alpha
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,17 +27,13 @@ Features:
 1. Add multiple images to the gallery at once
 1. Uses the thumbnail size specified in Settings -> Media
 1. Custom webfont icon for hover effect
-1. Support for fancyBox and prettyPhoto (developers can easily add their preferred lightbox via hooks and filters)
+1. Support for fancyBox and prettyPhoto (developers can easily add their preferred lightbox via hooks and filters, or [download this free plugin](http://sumobi.com/shop/easy-image-gallery-extend/ "Extend Easy Image Gallery with additional lightboxes")
 1. Uses the new WP 3.5+ media manager for a familiar and intuitive way to add your images
 1. WordPress 3.6 Ready
 
 = Usage = 
 
-Galleries are automatically appended to the bottom of your post/page unless you use the shortcode below. Using the shortcode will give you finer control over placement within the content area.
-
-= Note =
-
-fancyBox requires a [license for commercial use](http://fancyapps.com/fancybox/#license "fancyBox"). It's free to use for personal websites however.
+Galleries are automatically appended to the bottom of your post/page unless you use the shortcode below. Using the shortcode will give you finer control over placement within the content area. Plugin settings are located under Settings -> Media
 
 = Shortcode Usage =
 
@@ -78,7 +74,7 @@ If you use the template tag above, you will need remove the default content filt
 
 1. Upload the entire `easy-image-gallery` folder to the `/wp-content/plugins/` directory, or just upload the ZIP package via 'Plugins > Add New > Upload' in your WP Admin
 1. Activate Easy Image Gallery from the 'Plugins' page in WordPress
-1. Configure the plugin's settings from plugins > Easy Image Gallery
+1. Configure the plugin's settings from Settings -> Media
 1. Create a gallery on any post or page from the added 'Image Gallery' metabox.
 
 == Screenshots ==
@@ -92,12 +88,48 @@ If you use the template tag above, you will need remove the default content filt
 
 == Frequently Asked Questions ==
 
+= fancyBox looks different after upgrading to 1.1 =
+
+This plugin mistakenly had fancyBox 2 included. Non-GPL software is not allowed on the WordPress repo (fancyBox 2 is licensed under Creative Commons). It has now been replaced with fancyBox 1, which is GPL compatible. If you'd like to add fancyBox 2 back into the plugin, simply [download this free plugin](http://sumobi.com/shop/easy-image-gallery-extend/ "Extend Easy Image Gallery with additional lightboxes")
+
+= Where are the plugin's settings? =
+
+In your WordPress admin under Settings -> Media
+
 = How can I add another Lightbox script to the plugin? =
 
-[Read This](http://sumobi.com/how-to-add-any-lightbox-script-to-the-easy-image-gallery-plugin "How to add another lightbox script to Easy Image Gallery")
+[Read This](http://sumobi.com/how-to-add-any-lightbox-script-to-the-easy-image-gallery-plugin "How to add another lightbox script to Easy Image Gallery") or [download this free plugin](http://sumobi.com/shop/easy-image-gallery-extend/ "Extend Easy Image Gallery with additional lightboxes") to add Colorbox and fancyBox 2
 
+= How can I use a different thumbnail size for each post type? =
+
+[Read This](http://sumobi.com/different-thumbnail-sizes-for-each-post-type-with-easy-image-gallery/ "Different thumbnail sizes for each post type with Easy Image Gallery")
+
+== Upgrade Notice ==
+
+= 1.1.2 =
+Added esc_attr to title attribute. Captions that included quotes were getting cut off.
 
 == Changelog ==
+
+= 1.1.2 =
+* Fix: Added esc_attr to title attribute. Captions that included quotes were getting cut off.
+
+= 1.1.1 =
+* Fix: Missing slash on path to CSS file when plugin's CSS is overridden from a child theme
+
+= 1.1 =
+* Tweak: fancybox 2 has been replaced with fancybox 1, as non GPL software is not allowed on the WP repo (fancyBox 2 is license under Creative Commons). If you'd like to add fancyBox 2 back into the plugin, download and activate this small plugin. http://sumobi.com/shop/easy-image-gallery-extend/ After activation, you'll find an option in the plugin's settings to switch the lightbox to fancyBox 2.
+
+= 1.0.6 =
+* Fix: Settings link on plugins page
+* Fix PHP notice on Settings -> Media page
+* Tweak: removed unneeded function
+
+= 1.0.5 =
+
+* Tweak: The plugin's options page has been moved to settings -> media
+* Tweak: Renamed the 'thumbnail_image_size' filter name to be 'easy_image_gallery_thumbnail_image_size' so it's unique to the plugin 
+* Tweak: Renamed the 'linked_image_size' filter name to be 'easy_image_gallery_linked_image_size' so it's unique to the plugin 
 
 = 1.0.4 =
 
@@ -122,17 +154,3 @@ If you use the template tag above, you will need remove the default content filt
 = 1.0 =
 
 * Initial release
-
-== Upgrade Notice ==
-
-= 1.0.4 =
-Images now use the image's caption rather than title field
-
-= 1.0.3 =
-Fixes minor bug where JS was loaded onto page when there is no gallery
-
-= 1.0.2 =
-Improved loading of scripts
-
-= 1.0.1 =
-More consistent styling with WordPress' Media Manager

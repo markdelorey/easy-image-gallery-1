@@ -18,8 +18,11 @@ function easy_image_gallery_is_gallery() {
 
 	$attachment_ids = get_post_meta( get_the_ID(), '_easy_image_gallery', true );
 
-	if ( $attachment_ids )
+	if ( $attachment_ids ) {
 		return true;
+	}
+
+	return false;
 }
 
 
@@ -318,12 +321,12 @@ function easy_image_gallery() {
 			$classes = array( 'popup' );
 
 			// get original image
-			$image_link	= wp_get_attachment_image_src( $attachment_id, apply_filters( 'linked_image_size', 'large' ) );
+			$image_link	= wp_get_attachment_image_src( $attachment_id, apply_filters( 'easy_image_gallery_linked_image_size', 'large' ) );
 			$image_link	= $image_link[0];	
 
-			$image = wp_get_attachment_image( $attachment_id, apply_filters( 'thumbnail_image_size', 'thumbnail' ), '', array( 'alt' => trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ) ) );
+			$image = wp_get_attachment_image( $attachment_id, apply_filters( 'easy_image_gallery_thumbnail_image_size', 'thumbnail' ), '', array( 'alt' => trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ) ) );
 
-			$image_caption = get_post( $attachment_id )->post_excerpt ? get_post( $attachment_id )->post_excerpt : '';
+			$image_caption = get_post( $attachment_id )->post_excerpt ? esc_attr( get_post( $attachment_id )->post_excerpt ) : '';
 
 			$image_class = esc_attr( implode( ' ', $classes ) );
 
