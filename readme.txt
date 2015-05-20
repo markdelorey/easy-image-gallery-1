@@ -3,7 +3,7 @@ Contributors: sumobi
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EFUPMPEZPGW7L
 Tags: image gallery, image, galleries, simple, easy, sumobi
 Requires at least: 3.5
-Tested up to: 3.9.2
+Tested up to: 4.2.2
 Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -106,13 +106,13 @@ In your WordPress admin under Settings -> Media
 
 == Upgrade Notice ==
 
-= 1.1.2 =
-Added esc_attr to title attribute. Captions that included quotes were getting cut off.
+Updated PrettyPhoto JavaScript file to v3.1.6 and fixed captions that had quotes inside them
 
 == Changelog ==
 
 = 1.1.2 =
 * Fix: Added esc_attr to title attribute. Captions that included quotes were getting cut off.
+* Fix: Updated PrettyPhoto JavaScript file to v3.1.6
 
 = 1.1.1 =
 * Fix: Missing slash on path to CSS file when plugin's CSS is overridden from a child theme
