@@ -55,7 +55,7 @@ if ( ! class_exists( 'Easy_Image_Gallery' ) ) {
 			    define( 'EASY_IMAGE_GALLERY_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
 			if ( ! defined( 'EASY_IMAGE_GALLERY_VERSION' ) )
-			    define( 'EASY_IMAGE_GALLERY_VERSION', '1.1.2' );
+			    define( 'EASY_IMAGE_GALLERY_VERSION', '1.1.3' );
 
 			if ( ! defined( 'EASY_IMAGE_GALLERY_INCLUDES' ) )
 			    define( 'EASY_IMAGE_GALLERY_INCLUDES', EASY_IMAGE_GALLERY_DIR . trailingslashit( 'includes' ) );
