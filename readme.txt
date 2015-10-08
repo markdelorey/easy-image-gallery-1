@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image gallery, image, galleries, simple, easy, sumobi
 Requires at least: 3.5
 Tested up to: 4.3.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -106,11 +106,13 @@ In your WordPress admin under Settings -> Media
 
 == Upgrade Notice ==
 
-Updated PrettyPhoto JavaScript file to v3.1.6 and fixed captions that had quotes inside them
 
 == Changelog ==
 
-= 1.3.1 =
+= 1.1.4 =
+* Tweak: Updated French translations, props fxbenard
+
+= 1.1.3 =
 * Tweak: Added text domain to plugin headers in accordance with new translation system
 
 = 1.1.2 =
